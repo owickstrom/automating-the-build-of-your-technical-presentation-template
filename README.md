@@ -5,6 +5,11 @@ PDF output using [Pandoc][] and [Beamer][]. Source code snippets are included
 using [pandoc-include-code][]. Diagrams are generated using [Graphviz][] and/or
 [PlantUML].
 
+## Samples
+
+* [With Notes (Presenter PDF)](https://wickstrom.tech/assets/slides.pdf)
+* [Without Notes (Handout)](https://wickstrom.tech/assets/slides-no-notes.pdf)
+
 ## Requirements
 
 * A LaTeX distribution, e.g. [TeX Live](https://www.tug.org/texlive/) or

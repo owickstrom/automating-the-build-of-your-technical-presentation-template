@@ -1,0 +1,68 @@
+\usepackage{setspace}
+\setstretch{1.5}
+
+\definecolor{darkgray}{HTML}{666666}
+\definecolor{mediumgray}{HTML}{888888}
+\definecolor{dimgray}{HTML}{BBBBBB}
+
+\setbeamercolor{alerted text}{fg=black}
+\setbeamerfont{alerted text}{series=\bfseries}
+
+\beamerdefaultoverlayspecification{<+->}
+
+\usepackage{etoolbox}
+\usepackage{pgfpages}
+
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{cabin}
+\usepackage{newtxsf}
+
+\usepackage[scaled=1.1]{inconsolata}
+
+\usepackage{array}
+\usepackage{booktabs}
+
+\beamertemplatenavigationsymbolsempty
+
+\setbeamersize{text margin left=30pt,text margin right=30pt}
+\setbeamercolor{structure}{fg=black}
+\setbeamertemplate{frametitle}{\vspace{20pt}\insertframetitle}
+\setbeamerfont{frametitle}{size=\fontsize{14pt}{14pt},series=\bfseries}
+\setbeamerfont{title}{size=\fontsize{20pt}{20pt},family=\textrm,series=\bfseries}
+\setbeamerfont{subtitle}{size=\fontsize{12pt}{12pt},series=\mdseries}
+\setbeamerfont{author}{size=\fontsize{10pt}{10pt}}
+\setbeamerfont{date}{size=\fontsize{10pt}{10pt}}
+\setbeamertemplate{footline}{
+  \hspace{0.25cm}
+  \hfill
+  \color{mediumgray}{
+    \href{https://example.com}{example.com}}
+  \hspace{0.25cm}
+  \vspace{0.25cm}
+}
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{section in toc}{\inserttocsectionnumber.~\inserttocsection}
+
+\newcommand{\singletitle}[1]{
+  \begin{center}
+    \vfill\vfill
+    \fontsize{20pt}{20pt}\textbf{#1}
+    \vfill\vfill
+  \end{center}}
+
+\newcommand{\notelist}[1]{
+  \note{
+    \begin{itemize}[<.->]
+    \setlength\itemsep{2pt}
+    \setstretch{0}#1
+    \end{itemize}
+  }}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \singletitle{\insertsectionhead}
+  \end{frame}
+}
+
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},fontsize=\linespread{1.2}\scriptsize}
